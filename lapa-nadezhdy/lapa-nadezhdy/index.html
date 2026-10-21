@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лапа надежды — вымышленный концепт платформы помощи собакам. Познакомьтесь с шестью героями демонстрационного проекта.">
+  <meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'">
+  <meta name="theme-color" content="#315B46">
+  <title>Лапа надежды — дружба начинается с лапы</title>
+  <link rel="icon" href="assets/paw.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <div class="demo-banner">Демонстрационный проект: животные и заявки вымышленные</div>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Лапа надежды — главная"><img src="assets/paw.svg" width="42" height="42" alt=""><span>лапа надежды<small>место, где начинается дружба</small></span></a>
+    <nav aria-label="Основная навигация"><a href="#dogs">Наши собаки</a><a href="#how">Как это работает</a><a href="#about">О проекте</a></nav>
+    <a class="button button-small header-cta" href="#dogs">Найти друга <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="little-dot"></span> У большой дружбы четыре лапы</p>
+        <h1 id="hero-title">Кому-то нужен<br>дом.<br><em>А кому-то — ты.</em></h1>
+        <p class="hero-description">Иногда, чтобы изменить целую жизнь, достаточно открыть дверь. Познакомьтесь с теми, кто мог бы стать вашим лучшим другом.</p>
+        <div class="hero-actions"><a class="button" href="#dogs">Познакомиться с собаками <span aria-hidden="true">↗</span></a><a class="text-link" href="#how">С чего начать <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-footnote"><span class="heart-mark" aria-hidden="true">♡</span><p>Не идеальная порода.<br><strong>Ваше особенное совпадение.</strong></p></div>
+      </div>
+      <div class="hero-visual">
+        <span class="photo-topline">ШЕСТЬ ИСТОРИЙ · ОДНА МЕЧТА</span>
+        <img class="hero-photo" src="assets/dog-1.jpg" width="1400" height="1750" alt="Золотистая собака смотрит в камеру" fetchpriority="high">
+        <span class="round-stamp" aria-hidden="true">место для<br><b>любви ♡</b></span>
+        <div class="hero-photo-note"><div><span class="photo-note-label">Герой нашего концепта</span><strong>Знакомьтесь, Солнечный</strong><span>3 года · большой любитель прогулок</span></div><button class="round-button" type="button" data-dog="sunny" aria-label="Познакомиться с Солнечным">↗</button></div>
+        <span class="photo-caption">Фото — иллюстрация вымышленной истории</span>
+      </div>
+    </section>
+    <div class="values-strip"><div class="wrap"><span>У каждого свой характер</span><span aria-hidden="true">✳</span><span>У дружбы нет породы</span><span aria-hidden="true">✳</span><span>Вместе начинается новое</span></div></div>
+    <section class="catalog section wrap" id="dogs" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">Давайте знакомиться</p><h2 id="catalog-title">Может быть, это <em>ваш друг?</em></h2></div><p>Шесть разных характеров.<br>И столько поводов улыбнуться.</p></div>
+      <form class="filters" id="filters" aria-label="Фильтры каталога">
+        <label>Возраст<select id="age" name="age"><option value="all">Любой возраст</option><option value="puppy">Щенки · до 1 года</option><option value="adult">Взрослые · 1–7 лет</option><option value="senior">Старшие · от 8 лет</option></select></label>
+        <label>Размер<select id="size" name="size"><option value="all">Любой размер</option><option value="small">Маленький</option><option value="medium">Средний</option><option value="large">Большой</option></select></label>
+        <label>Характер<select id="temperament" name="temperament"><option value="all">Любой характер</option><option value="calm">Спокойный</option><option value="active">Активный</option><option value="affectionate">Ласковый</option></select></label>
+        <button class="reset-button" type="reset">Сбросить <span aria-hidden="true">↺</span></button>
+      </form>
+      <div class="catalog-meta"><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p><span>Все анкеты демонстрационные</span></div>
+      <div class="dog-grid" id="dog-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">♡</span><h3>Такого сочетания пока нет</h3><p>В нашем маленьком каталоге всего шесть героев. Попробуйте выбрать другой характер или размер.</p><button class="button" type="button" id="reset-empty">Показать всех собак</button></div>
+      <noscript><p class="notice">Для каталога, фильтров и демонстрационной формы включите JavaScript в браузере. Главная страница доступна без него.</p></noscript>
+    </section>
+    <section class="how-section" id="how" aria-labelledby="how-title"><div class="wrap section">
+      <div class="section-heading"><div><p class="eyebrow">Маленькие шаги к большой дружбе</p><h2 id="how-title">Всё начинается <em>со знакомства.</em></h2></div><p>Так мог бы выглядеть путь<br>к встрече на настоящей платформе.</p></div>
+      <div class="steps"><article><span class="step-number">01</span><h3>Найдите своего</h3><p>Посмотрите фотографии и истории. Подумайте, чей ритм жизни близок вашему.</p></article><article><span class="step-number">02</span><h3>Расскажите о себе</h3><p>Откройте учебную форму в анкете. Используйте вымышленные данные, чтобы попробовать сценарий.</p></article><article><span class="step-number">03</span><h3>Представьте встречу</h3><p>В реальном сервисе здесь был бы разговор с куратором. В нашем концепте сценарий заканчивается демоэкраном.</p></article></div>
+    </div></section>
+    <section class="about section wrap" id="about" aria-labelledby="about-title"><div class="about-art" aria-hidden="true"><span>друг —<br>это <em>навсегда.</em></span><img src="assets/paw.svg" width="104" height="104" alt=""></div><div class="about-copy"><p class="eyebrow">Идея, в которой есть тепло</p><h2 id="about-title">Забота начинается<br>с <em>внимания.</em></h2><p>«Лапа надежды» — проект для портфолио о том, как дизайн может помочь людям замечать животных и осознанно выбирать друга.</p><p>Это вымышленная платформа, а не действующий приют. Имена, возраст и истории придуманы; фотографии используются как иллюстрации. Здесь нет сбора денег, реального пристройства или отправки заявок.</p><a class="text-link" href="#faq">Подробнее о концепте <span aria-hidden="true">↗</span></a></div></section>
+    <section class="faq wrap" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Перед знакомством</h2><div><details><summary>Можно ли забрать собаку с этого сайта?</summary><p>Нет. Все анкеты вымышленные и созданы для демонстрации интерфейса. Собаки на фотографиях не предлагаются к пристройству через этот сайт.</p></details><details><summary>Куда отправится моя заявка?</summary><p>Никуда. Форма проверяет поля и показывает учебный результат только в вашем браузере. Введённые данные не отправляются и не сохраняются. Для проверки используйте вымышленные имя и email.</p></details><details><summary>Как помочь настоящим животным?</summary><p>Обратитесь в проверенный приют в вашем городе и уточните, какая помощь нужна сейчас: прогулки, корм, перевозка или временный дом. У этого концепта нет партнёрских приютов и платёжных реквизитов.</p></details></div></section>
+    <section class="closing wrap"><span aria-hidden="true">♡</span><h2>Большая дружба.<br><em>С одного маленького шага.</em></h2><a class="button button-light" href="#dogs">Посмотреть анкеты <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#"><img src="assets/paw.svg" width="34" height="34" alt=""><span>лапа надежды<small>учебный концепт · 2026</small></span></a><p>Демонстрационный проект: животные и заявки вымышленные</p><a href="assets/SOURCES.txt">Источники фотографий ↗</a></footer>
+  <dialog id="dog-dialog" aria-labelledby="dialog-title"><button type="button" class="dialog-close" id="close-dialog" aria-label="Закрыть анкету">×</button><div id="profile-view"><img class="profile-photo" id="profile-photo" src="assets/dog-1.jpg" alt=""><div class="profile-copy"><p class="eyebrow">Вымышленная анкета</p><h2 id="dialog-title"></h2><p class="profile-meta" id="profile-meta"></p><div class="tags" id="profile-tags"></div><p id="profile-story"></p><div class="profile-home"><h3>Какой дом мы представляем</h3><p id="profile-home"></p></div><p class="small-note">Фото иллюстративное. Эта собака не предлагается к пристройству.</p><button class="button" type="button" id="open-application">Попробовать заявку <span aria-hidden="true">↗</span></button></div></div>
+    <div class="application-view" id="application-view" hidden><button class="text-link" type="button" id="back-profile">← Назад к анкете</button><p class="eyebrow">Только знакомство с интерфейсом</p><h2 id="application-title">Учебная заявка</h2><p id="application-dog"></p><p class="notice">Используйте вымышленные данные. Ничего не отправляется и не сохраняется.</p><form id="application-form" autocomplete="off"><button class="sample-button" type="button" id="fill-sample">Заполнить примером</button><label>Вымышленное имя <span aria-hidden="true">*</span><input name="name" id="app-name" type="text" required minlength="2" maxlength="60" placeholder="Например, Саша" autocomplete="off"></label><label>Учебный email <span aria-hidden="true">*</span><input name="email" id="app-email" type="email" required maxlength="120" placeholder="sasha@example.com" autocomplete="off"></label><label>Какой день вы проведёте вместе?<textarea name="message" id="app-message" rows="3" maxlength="600" placeholder="Прогулка в парке, немного игр и тихий вечер…"></textarea></label><label class="checkbox-label"><input type="checkbox" name="demo" required><span>Я понимаю, что это учебная заявка и настоящей встречи не будет. *</span></label><p class="small-note">* Обязательные поля</p><button class="button" type="submit">Проверить демозаявку <span aria-hidden="true">↗</span></button></form></div>
+    <div class="success-view" id="success-view" hidden><span class="success-icon" aria-hidden="true">✓</span><p class="eyebrow">Демонстрация завершена</p><h2 id="success-title" tabindex="-1">Вот так начинается знакомство.</h2><p>Поля заполнены корректно. В настоящем сервисе следующим шагом был бы разговор с куратором.</p><p class="notice"><strong>Заявка не отправлена.</strong><br>Это учебный сценарий. Введённые данные очищены.</p><button class="button" type="button" id="finish-demo">Вернуться к собакам</button></div>
+  </dialog>
+</body>
+</html>
